@@ -5,6 +5,7 @@ target 'vk_video' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Moya-ModelMapper/RxSwift'
   pod 'Moya/RxSwift'
   pod 'VK-ios-sdk'
   pod 'SwiftDate'
@@ -14,6 +15,7 @@ target 'vk_video' do
   pod 'RxDataSources'
   pod 'RxKeyboard'
   pod 'Nuke'
+  pod 'SwiftyJSON'
 end
 
 target 'vk_videoTests' do

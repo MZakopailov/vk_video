@@ -28,14 +28,7 @@ final class User: Object, Mappable {
     func mapping(map: Map) {
         id      <- map["id"]
         token   <- map["key"]
-        name    <- map["name"]
-        avatar  <- map["avatar"]
-    }
- 
-    static func saveUser(_ user: User) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(user, update: true)
-        }
+        name    <- map["first_name"]
+        avatar  <- map["photo_max_orig"]
     }
 }

@@ -25,6 +25,8 @@
 		FC123ADC2289A37900722019 /* search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC123ADB2289A37900722019 /* search.storyboard */; };
 		FC123ADE2289A39B00722019 /* SearchViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123ADD2289A39B00722019 /* SearchViewModal.swift */; };
 		FC123AE02289A45900722019 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123ADF2289A45900722019 /* SearchViewController.swift */; };
+		FC123AE2228ABB3800722019 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123AE1228ABB3800722019 /* LoginViewModel.swift */; };
+		FC123AE5228AC47C00722019 /* VKNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123AE4228AC47C00722019 /* VKNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		FC123ADB2289A37900722019 /* search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = search.storyboard; sourceTree = "<group>"; };
 		FC123ADD2289A39B00722019 /* SearchViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModal.swift; sourceTree = "<group>"; };
 		FC123ADF2289A45900722019 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FC123AE1228ABB3800722019 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC123AE4228AC47C00722019 /* VKNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		FC123A9A228969AC00722019 /* vk_video */ = {
 			isa = PBXGroup;
 			children = (
+				FC123AE3228AC45100722019 /* Network */,
 				FC123AD4228975B800722019 /* Helpers */,
 				FC123AD12289721A00722019 /* Model */,
 				FC123ACC2289710C00722019 /* Splash */,
@@ -184,6 +189,7 @@
 		FC123AC9228970D500722019 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FC123AE1228ABB3800722019 /* LoginViewModel.swift */,
 				FC123A9D228969AC00722019 /* LoginViewController.swift */,
 				FC123A9F228969AC00722019 /* login.storyboard */,
 			);
@@ -235,6 +241,14 @@
 				FC123AD5228975CB00722019 /* Helper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FC123AE3228AC45100722019 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC123AE4228AC47C00722019 /* VKNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +461,9 @@
 				"${PODS_ROOT}/Target Support Files/Pods-vk_video/Pods-vk_video-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
@@ -460,6 +476,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -468,7 +485,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
@@ -481,6 +500,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,11 +518,13 @@
 				FC123AD32289722600722019 /* User.swift in Sources */,
 				FC123AD0228971F100722019 /* SplashViewModel.swift in Sources */,
 				FC123AE02289A45900722019 /* SearchViewController.swift in Sources */,
+				FC123AE5228AC47C00722019 /* VKNetwork.swift in Sources */,
 				FC123AD6228975CB00722019 /* Helper.swift in Sources */,
 				FC123ADA22897D4300722019 /* SplashViewController.swift in Sources */,
 				FC123A9E228969AC00722019 /* LoginViewController.swift in Sources */,
 				FC123ADE2289A39B00722019 /* SearchViewModal.swift in Sources */,
 				FC123A9C228969AC00722019 /* AppDelegate.swift in Sources */,
+				FC123AE2228ABB3800722019 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
