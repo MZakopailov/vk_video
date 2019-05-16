@@ -9,4 +9,4 @@
 import Foundation
 import RealmSwift
 
-let CONFIG_REALM = Realm.Configuration( schemaVersion: 1, migrationBlock: { _, _ in})
+let CONFIG_REALM = Realm.Configuration( schemaVersion: 2, migrationBlock: { _, _ in})

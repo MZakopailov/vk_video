@@ -7,24 +7,68 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Nuke
+import BMPlayer
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searhBar: UISearchBar!
+    @IBOutlet weak var activityLoading: UIActivityIndicatorView!
+    
+    let viewModel = SearchViewModel()
+    
+    lazy var videos = BehaviorRelay<[Video]>(value: [])
+    lazy var selectedVideo = Video()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.videos
+            .asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: "VideoCell", cellType: VideoCell.self)) { row, video, cell in
+                if let url =  URL(string: video.preview) {
+                    Nuke.loadImage(with: url, into: cell.previewImage)
+                }
+                cell.nameTitle.text = video.title
+                cell.descriptionTitle.text = video.desc
+            }.disposed(by: viewModel.disposeBag)
+        
+        self.tableView
+            .rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let strongSelf = self else { return }
+                if let urlPlayer = URL(string: strongSelf.videos.value[indexPath.row].player) {
+                    UIApplication.shared.open(urlPlayer, options: [:], completionHandler: nil)
+                }
+            }).disposed(by: viewModel.disposeBag)
+        
+        searhBar
+            .rx.text
+            .orEmpty
+            .debounce(0.2, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] query in
+                guard let strongSelf = self else { return }
+                strongSelf.activityLoading.startAnimating()
+                strongSelf.viewModel
+                    .searchVideo(query: query)
+                    .asObservable()
+                    .do(onNext: { (_) in
+                        strongSelf.activityLoading.stopAnimating()
+                    })
+                    .bind(to: strongSelf.videos)
+                    .disposed(by: strongSelf.viewModel.disposeBag)
+            })
+            .disposed(by: viewModel.disposeBag)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? VideoPlayerViewController {
+            vc.video = selectedVideo
+        }
     }
-    */
 
 }

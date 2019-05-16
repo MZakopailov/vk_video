@@ -16,6 +16,7 @@ target 'vk_video' do
   pod 'RxKeyboard'
   pod 'Nuke'
   pod 'SwiftyJSON'
+  pod 'BMPlayer'
 end
 
 target 'vk_videoTests' do
