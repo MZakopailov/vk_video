@@ -15,7 +15,6 @@
 		FC123AA1228969AC00722019 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC123A9F228969AC00722019 /* login.storyboard */; };
 		FC123AA3228969AE00722019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC123AA2228969AE00722019 /* Assets.xcassets */; };
 		FC123AA6228969AF00722019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC123AA4228969AF00722019 /* LaunchScreen.storyboard */; };
-		FC123AB1228969AF00722019 /* vk_videoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123AB0228969AF00722019 /* vk_videoTests.swift */; };
 		FC123ABC228969AF00722019 /* vk_videoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123ABB228969AF00722019 /* vk_videoUITests.swift */; };
 		FC123ACE228971A600722019 /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC123ACD228971A600722019 /* splash.storyboard */; };
 		FC123AD0228971F100722019 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123ACF228971F100722019 /* SplashViewModel.swift */; };
@@ -29,6 +28,7 @@
 		FC123AE5228AC47C00722019 /* VKNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123AE4228AC47C00722019 /* VKNetwork.swift */; };
 		FC8893F4228C4F4E005FAC7F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893F3228C4F4E005FAC7F /* Video.swift */; };
 		FC8893F9228C53F8005FAC7F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893F8228C53F8005FAC7F /* VideoCell.swift */; };
+		FC8893FF228EF262005FAC7F /* vk_VKNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893FE228EF262005FAC7F /* vk_VKNetworkTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		FC123AA5228969AF00722019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC123AA7228969AF00722019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC123AAC228969AF00722019 /* vk_videoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vk_videoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC123AB0228969AF00722019 /* vk_videoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vk_videoTests.swift; sourceTree = "<group>"; };
 		FC123AB2228969AF00722019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC123AB7228969AF00722019 /* vk_videoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vk_videoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC123ABB228969AF00722019 /* vk_videoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vk_videoUITests.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		FC123AE4228AC47C00722019 /* VKNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetwork.swift; sourceTree = "<group>"; };
 		FC8893F3228C4F4E005FAC7F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		FC8893F8228C53F8005FAC7F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		FC8893FE228EF262005FAC7F /* vk_VKNetworkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vk_VKNetworkTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 		FC123AAF228969AF00722019 /* vk_videoTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC123AB0228969AF00722019 /* vk_videoTests.swift */,
+				FC8893FE228EF262005FAC7F /* vk_VKNetworkTest.swift */,
 				FC123AB2228969AF00722019 /* Info.plist */,
 			);
 			path = vk_videoTests;
@@ -295,6 +295,7 @@
 				FC123AA8228969AF00722019 /* Sources */,
 				FC123AA9228969AF00722019 /* Frameworks */,
 				FC123AAA228969AF00722019 /* Resources */,
+				E7B240A3C8BACD33A7E93592 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +315,7 @@
 				FC123AB3228969AF00722019 /* Sources */,
 				FC123AB4228969AF00722019 /* Frameworks */,
 				FC123AB5228969AF00722019 /* Resources */,
+				51F91BF0B280BE0EC783C35C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +400,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		51F91BF0B280BE0EC783C35C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vk_videoUITests/Pods-vk_videoUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vk_videoUITests/Pods-vk_videoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BC708F1BE0929CC108BE2198 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +480,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E7B240A3C8BACD33A7E93592 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vk_videoTests/Pods-vk_videoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vk_videoTests/Pods-vk_videoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F0191B73552C4EE67057C8EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -475,9 +549,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-vk_video/Pods-vk_video-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
@@ -500,9 +573,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
@@ -550,7 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC123AB1228969AF00722019 /* vk_videoTests.swift in Sources */,
+				FC8893FF228EF262005FAC7F /* vk_VKNetworkTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

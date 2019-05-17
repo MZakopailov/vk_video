@@ -4,7 +4,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'vk_video' do
-  pod 'Moya-ModelMapper/RxSwift'
+  pod 'Moya-ObjectMapper/RxSwift'
   pod 'Moya/RxSwift'
   pod 'VK-ios-sdk'
   pod 'SwiftDate'
@@ -16,14 +16,19 @@ target 'vk_video' do
   pod 'Nuke'
   pod 'SwiftyJSON'
   pod 'SVPullToRefresh'
+  
 end
 
 target 'vk_videoTests' do
-  inherit! :search_paths
-  # Pods for testing
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'Moya/RxSwift'
 end
 
 target 'vk_videoUITests' do
-  inherit! :search_paths
-  # Pods for testing
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Moya-ObjectMapper/RxSwift'
+  pod 'Moya/RxSwift'
 end

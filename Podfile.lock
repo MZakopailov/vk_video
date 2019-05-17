@@ -1,29 +1,28 @@
 PODS:
   - Alamofire (4.8.2)
   - Differentiator (3.1.0)
-  - ModelMapper (10.0.0):
-    - ModelMapper/Core (= 10.0.0)
-  - ModelMapper/Core (10.0.0)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya-ModelMapper/Core (9.0.0):
-    - ModelMapper (~> 10.0)
-    - Moya (~> 13.0)
-  - Moya-ModelMapper/RxSwift (9.0.0):
-    - Moya-ModelMapper/Core
-    - Moya/RxSwift (~> 13.0)
-    - RxSwift
-  - Moya/Core (13.0.1):
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya-ObjectMapper/Core (2.8):
+    - Moya (~> 12.0)
+    - ObjectMapper (~> 3.4)
+  - Moya-ObjectMapper/RxSwift (2.8):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift (~> 4)
+  - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Moya/RxSwift (13.0.1):
+    - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Nimble (8.0.1)
   - Nuke (7.6.3)
   - ObjectMapper (3.4.2)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
     - RealmSwift
+  - Quick (2.1.0)
   - Realm (3.15.0):
     - Realm/Headers (= 3.15.0)
   - Realm/Headers (3.15.0)
@@ -49,10 +48,12 @@ PODS:
   - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
-  - Moya-ModelMapper/RxSwift
+  - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
+  - Nimble
   - Nuke
   - "ObjectMapper+Realm"
+  - Quick
   - RxCocoa
   - RxDataSources
   - RxKeyboard
@@ -66,12 +67,13 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
-    - ModelMapper
     - Moya
-    - Moya-ModelMapper
+    - Moya-ObjectMapper
+    - Nimble
     - Nuke
     - ObjectMapper
     - "ObjectMapper+Realm"
+    - Quick
     - Realm
     - RealmSwift
     - Result
@@ -88,12 +90,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  ModelMapper: a8dbf2a2003bf626627b9fe7c9a22b3405a30404
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  Moya-ModelMapper: 4948625af7fc5eef41ad9fdfe0c3517170b50960
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -107,6 +110,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: 0bcef08d5a6aacefbb7dbfbce8a9a53dca668b72
+PODFILE CHECKSUM: 006955b27aef70702b8d4c839b0e5cd03561ef44
 
 COCOAPODS: 1.6.1
