@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Nuke
-import BMPlayer
+import SVPullToRefresh
 
 class SearchViewController: UIViewController {
 
@@ -22,10 +22,27 @@ class SearchViewController: UIViewController {
     
     lazy var videos = BehaviorRelay<[Video]>(value: [])
     lazy var selectedVideo = Video()
+    lazy var query = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.addInfiniteScrolling { [weak self] in
+            guard let strongSelf = self else { return }
+            if strongSelf.videos.value.count > 19 && strongSelf.videos.value.count % 20 == 0 {
+                strongSelf.viewModel
+                    .searchVideo(query: strongSelf.query, count: strongSelf.videos.value.count + 20)
+                    .asObservable()
+                    .do(onNext: { (_) in
+                        strongSelf.tableView.infiniteScrollingView.stopAnimating()
+                    })
+                    .bind(to: strongSelf.videos)
+                    .disposed(by: strongSelf.viewModel.disposeBag)
+            } else {
+                strongSelf.tableView.infiniteScrollingView.stopAnimating()
+            }
+        }
+        
         self.videos
             .asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "VideoCell", cellType: VideoCell.self)) { row, video, cell in
@@ -52,6 +69,7 @@ class SearchViewController: UIViewController {
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] query in
                 guard let strongSelf = self else { return }
+                strongSelf.query = query
                 strongSelf.activityLoading.startAnimating()
                 strongSelf.viewModel
                     .searchVideo(query: query)
@@ -63,12 +81,6 @@ class SearchViewController: UIViewController {
                     .disposed(by: strongSelf.viewModel.disposeBag)
             })
             .disposed(by: viewModel.disposeBag)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? VideoPlayerViewController {
-            vc.video = selectedVideo
-        }
     }
 
 }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B20C8F7427EED869282E2D74 /* libPods-vk_videoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDE14A92AB856E0C0946261 /* libPods-vk_videoUITests.a */; };
-		EE059189CC4FF39731F8D93D /* libPods-vk_videoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D3D92DE2C954DD8660DDCB /* libPods-vk_videoTests.a */; };
+		1288CF3732518008AC46809A /* Pods_vk_videoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D236C4A780F0955085AC9820 /* Pods_vk_videoUITests.framework */; };
+		170AE02BA5E222E8111AF68C /* Pods_vk_videoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F1088061D93A172F3ABD1E /* Pods_vk_videoTests.framework */; };
 		F31C25DF539D996D93CF99FA /* Pods_vk_video.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961209E21B237AE8719D6301 /* Pods_vk_video.framework */; };
 		FC123A9C228969AC00722019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123A9B228969AC00722019 /* AppDelegate.swift */; };
 		FC123A9E228969AC00722019 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123A9D228969AC00722019 /* LoginViewController.swift */; };
@@ -29,7 +29,6 @@
 		FC123AE5228AC47C00722019 /* VKNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC123AE4228AC47C00722019 /* VKNetwork.swift */; };
 		FC8893F4228C4F4E005FAC7F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893F3228C4F4E005FAC7F /* Video.swift */; };
 		FC8893F9228C53F8005FAC7F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893F8228C53F8005FAC7F /* VideoCell.swift */; };
-		FC8893FB228DB6EE005FAC7F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8893FA228DB6EE005FAC7F /* VideoPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +50,11 @@
 
 /* Begin PBXFileReference section */
 		2CBAAFA5268980EE051E4FC8 /* Pods-vk_video.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_video.release.xcconfig"; path = "Target Support Files/Pods-vk_video/Pods-vk_video.release.xcconfig"; sourceTree = "<group>"; };
-		33D3D92DE2C954DD8660DDCB /* libPods-vk_videoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vk_videoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48F1088061D93A172F3ABD1E /* Pods_vk_videoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk_videoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6D2446049AD690BEA7E409 /* Pods-vk_videoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_videoUITests.debug.xcconfig"; path = "Target Support Files/Pods-vk_videoUITests/Pods-vk_videoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6CDE14A92AB856E0C0946261 /* libPods-vk_videoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vk_videoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961209E21B237AE8719D6301 /* Pods_vk_video.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk_video.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF42B350156322BEF36F6B86 /* Pods-vk_video.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_video.debug.xcconfig"; path = "Target Support Files/Pods-vk_video/Pods-vk_video.debug.xcconfig"; sourceTree = "<group>"; };
+		D236C4A780F0955085AC9820 /* Pods_vk_videoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk_videoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B820D10FDF682BAF3147B /* Pods-vk_videoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_videoUITests.release.xcconfig"; path = "Target Support Files/Pods-vk_videoUITests/Pods-vk_videoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E8E56B1A1E5E043A0BEFF6D4 /* Pods-vk_videoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_videoTests.debug.xcconfig"; path = "Target Support Files/Pods-vk_videoTests/Pods-vk_videoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F326D56591BEBB67D96CF241 /* Pods-vk_videoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk_videoTests.release.xcconfig"; path = "Target Support Files/Pods-vk_videoTests/Pods-vk_videoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +83,6 @@
 		FC123AE4228AC47C00722019 /* VKNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKNetwork.swift; sourceTree = "<group>"; };
 		FC8893F3228C4F4E005FAC7F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		FC8893F8228C53F8005FAC7F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
-		FC8893FA228DB6EE005FAC7F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE059189CC4FF39731F8D93D /* libPods-vk_videoTests.a in Frameworks */,
+				170AE02BA5E222E8111AF68C /* Pods_vk_videoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B20C8F7427EED869282E2D74 /* libPods-vk_videoUITests.a in Frameworks */,
+				1288CF3732518008AC46809A /* Pods_vk_videoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				961209E21B237AE8719D6301 /* Pods_vk_video.framework */,
-				33D3D92DE2C954DD8660DDCB /* libPods-vk_videoTests.a */,
-				6CDE14A92AB856E0C0946261 /* libPods-vk_videoUITests.a */,
+				48F1088061D93A172F3ABD1E /* Pods_vk_videoTests.framework */,
+				D236C4A780F0955085AC9820 /* Pods_vk_videoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,7 +206,6 @@
 				FC8893F7228C53DB005FAC7F /* Views */,
 				FC123ADD2289A39B00722019 /* SearchViewModal.swift */,
 				FC123ADF2289A45900722019 /* SearchViewController.swift */,
-				FC8893FA228DB6EE005FAC7F /* VideoPlayerViewController.swift */,
 				FC123ADB2289A37900722019 /* search.storyboard */,
 			);
 			path = Search;
@@ -477,12 +474,10 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-vk_video/Pods-vk_video-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BMPlayer/BMPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
@@ -494,7 +489,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
@@ -504,12 +499,10 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
@@ -521,7 +514,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
@@ -540,7 +533,6 @@
 			files = (
 				FC123AD32289722600722019 /* User.swift in Sources */,
 				FC123AD0228971F100722019 /* SplashViewModel.swift in Sources */,
-				FC8893FB228DB6EE005FAC7F /* VideoPlayerViewController.swift in Sources */,
 				FC123AE02289A45900722019 /* SearchViewController.swift in Sources */,
 				FC123AE5228AC47C00722019 /* VKNetwork.swift in Sources */,
 				FC123AD6228975CB00722019 /* Helper.swift in Sources */,

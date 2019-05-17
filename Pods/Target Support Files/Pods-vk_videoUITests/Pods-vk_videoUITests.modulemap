@@ -1,0 +1,6 @@
+framework module Pods_vk_videoUITests {
+  umbrella header "Pods-vk_videoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
