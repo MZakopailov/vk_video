@@ -32,6 +32,8 @@ class SearchViewController: UIViewController {
             if strongSelf.videos.value.count > 19 && strongSelf.videos.value.count % 20 == 0 {
                 strongSelf.viewModel
                     .searchVideo(query: strongSelf.query, count: strongSelf.videos.value.count + 20)
+                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+                    .observeOn(MainScheduler.instance)
                     .asObservable()
                     .do(onNext: { (_) in
                         strongSelf.tableView.infiniteScrollingView.stopAnimating()
@@ -73,6 +75,8 @@ class SearchViewController: UIViewController {
                 strongSelf.activityLoading.startAnimating()
                 strongSelf.viewModel
                     .searchVideo(query: query)
+                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+                    .observeOn(MainScheduler.instance)
                     .asObservable()
                     .do(onNext: { (_) in
                         strongSelf.activityLoading.stopAnimating()
